@@ -91,5 +91,15 @@ emailInput.addEventListener("input", () => {
   formMessage.textContent = "";
 });
 
+// Botón para volver arriba
+const toTop = document.getElementById("toTop");
+
+function updateToTop() {
+  toTop.classList.toggle("is-visible", window.scrollY > 500);
+}
+
+window.addEventListener("scroll", updateToTop, { passive: true });
+updateToTop();
+
 // Año del pie de página
 document.getElementById("year").textContent = String(new Date().getFullYear());

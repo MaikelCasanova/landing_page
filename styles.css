@@ -882,6 +882,38 @@ h2 {
   margin: 0;
 }
 
+/* ---------- Volver arriba ---------- */
+.to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  box-shadow: 0 12px 24px rgba(255, 90, 54, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.to-top:hover {
+  background: var(--accent-dark);
+}
+
 /* ---------- Reveal ---------- */
 .reveal {
   opacity: 0;
