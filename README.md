@@ -25,3 +25,8 @@ Y visita `http://localhost:8000`.
 - **Imágenes reales:** sustituye los `<svg>` de `.product-media` y `.hero-shoe` por `<img>` con tus fotos.
 
 La cesta y el formulario son demostraciones de interfaz: no envían datos ni realizan compras.
+
+## Equipo
+
+- Maikel Casanova — diseño y estructura inicial.
+- Cristel (`cristel-ux`) — documentación y mejoras.
