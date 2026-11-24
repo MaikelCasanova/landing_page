@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PASO: zapatos ligeros, cómodos y hechos para acompañarte cada día. Descubre la nueva colección y envío gratis desde 60 €."
+    />
+    <meta name="theme-color" content="#f6f4ef" />
+    <meta property="og:title" content="PASO — Cada paso, una mejor versión" />
+    <meta
+      property="og:description"
+      content="Zapatos diseñados para moverte con comodidad y estilo. Nueva colección 2026."
+    />
+    <meta property="og:type" content="website" />
+    <title>PASO — Cada paso, una mejor versión</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <!-- Ilustraciones reutilizables -->
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-shoe" viewBox="0 0 640 320">
+        <ellipse cx="330" cy="299" rx="268" ry="13" class="shoe-shadow" />
+        <path
+          class="shoe-upper"
+          d="M62 244c-6-16 4-30 20-35l44-13c20-6 34-16 48-32l52-56c12-13 29-14 42-4l38 30c11 9 14 23 8 35l-8 21c36 10 79 21 124 32l118 26c20 6 32 12 36 21l-514 0c-10 0-15-11-8-25z"
+        />
+        <path
+          class="shoe-sole"
+          d="M68 267h516c8 0 14 6 12 14-2 8-9 12-20 12H80c-14 0-22-9-20-18 1-5 4-7 8-8z"
+        />
+        <path
+          class="shoe-detail"
+          d="M174 164l52-56c12-13 29-14 42-4l24 19-44 45c-20 10-50 10-74-4z"
+        />
+        <path
+          class="shoe-accent"
+          d="M226 108c12-13 29-14 42-4l18 15-40 41-28-28z"
+        />
+        <path
+          class="shoe-accent"
+          d="M118 224c70-14 130-16 190-4-10 18-100 26-178 28z"
+        />
+        <path
+          class="shoe-laces"
+          d="M248 150l26-22m-14 33l28-24m-12 34l30-25m-18 34l30-25"
+          fill="none"
+          stroke-width="7"
+          stroke-linecap="round"
+        />
+        <path class="shoe-detail" d="M70 214l30-8-4 26-30 6z" />
+        <path
+          d="M466 229c42 10 82 21 110 37l-110 3z"
+          fill="#fff"
+          opacity=".16"
+        />
+      </symbol>
+      <symbol id="icon-feather" viewBox="0 0 24 24">
+        <path d="M20.2 3.8c-4.6-1.3-11.6.6-15.4 4.4a7.2 7.2 0 0 0 10.2 10.2c3.8-3.8 5.7-10.8 4.4-15.4Z" />
+        <path d="M4 20c2.5-5 6-8.5 10.5-11M9 14l2 2m2-6 2 2" />
+      </symbol>
+      <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3.5 2" />
+      </symbol>
+      <symbol id="icon-leaf" viewBox="0 0 24 24">
+        <path d="M20 4C11 4 5 8 5 15a5 5 0 0 0 5 5c7 0 10-6 10-16Z" />
+        <path d="M4 21c3-6 7-10 12-13" />
+      </symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24">
+        <path d="M12 3 4.5 6v5.5c0 4.7 3.1 8.4 7.5 9.5 4.4-1.1 7.5-4.8 7.5-9.5V6L12 3Z" />
+        <path d="m9 12 2 2 4-4" />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#inicio" aria-label="PASO, volver al inicio">PASO<span>®</span></a>
+
+        <nav class="nav" id="nav" aria-label="Navegación principal">
+          <a href="#coleccion">Colección</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#opiniones">Opiniones</a>
+          <a class="nav-cta" href="#coleccion">Comprar ahora</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="cart" href="#coleccion" aria-label="Ver la colección">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 7h16l-1.3 12H5.3L4 7Z" />
+              <path d="M9 7V5a3 3 0 0 1 6 0v2" />
+            </svg>
+            <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+          </a>
+          <button
+            class="menu-button"
+            id="menuButton"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="nav"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" id="inicio">
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span class="dot"></span> Nueva colección 2026</p>
+            <h1>Cada paso,<br />una <em>mejor</em> versión.</h1>
+            <p class="hero-text">
+              Zapatos que acompañan tu ritmo: ligeros, cómodos y con un diseño que
+              habla por ti. Del primer café al último tren.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#coleccion">
+                Explorar colección
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+              </a>
+              <a class="button button-ghost" href="#beneficios">Por qué PASO</a>
+            </div>
+            <dl class="stats">
+              <div><dt>Ligereza</dt><dd>180 <span>g</span></dd></div>
+              <div><dt>Confort</dt><dd>24 <span>h</span></dd></div>
+              <div><dt>Reseñas</dt><dd>4,9 <span>/ 5</span></dd></div>
+            </dl>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="Ilustración de un zapato PASO">
+            <div class="hero-orb"></div>
+            <div class="hero-ring"></div>
+            <div class="hero-tag hero-tag-top">Edición limitada</div>
+            <div class="hero-shoe">
+              <svg viewBox="0 0 640 320" role="img" aria-label="Zapatilla PASO Urban en color naranja">
+                <use href="#icon-shoe" />
+              </svg>
+            </div>
+            <div class="hero-tag hero-tag-bottom">
+              <strong>3.200+</strong> personas ya se mueven con PASO
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIRA -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Envío gratis desde 60 € ✦ 30 días para devolverlo ✦ Diseñado en España ✦ Calidad garantizada ✦&nbsp;</span>
+          <span>Envío gratis desde 60 € ✦ 30 días para devolverlo ✦ Diseñado en España ✦ Calidad garantizada ✦&nbsp;</span>
+        </div>
+      </div>
+
+      <!-- COLECCIÓN -->
+      <section class="section" id="coleccion">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">La colección</p>
+              <h2>Encuentra tu próximo par</h2>
+            </div>
+            <p class="section-intro">Tres formas de moverte. Una misma obsesión: que no quieras quitártelos.</p>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card reveal">
+              <div class="product-media theme-urban">
+                <span class="product-badge">Más vendido</span>
+                <svg viewBox="0 0 640 320" role="img" aria-label="Zapatilla PASO Urban">
+                  <use href="#icon-shoe" />
+                </svg>
+              </div>
+              <div class="product-body">
+                <div class="product-line">
+                  <h3>PASO Urban</h3>
+                  <span class="price">89 €</span>
+                </div>
+                <p>El imprescindible de cada día. Comodidad desde el primer paso.</p>
+                <button class="add-button" type="button" data-product="PASO Urban">Añadir a la cesta <span>+</span></button>
+              </div>
+            </article>
+
+            <article class="product-card reveal">
+              <div class="product-media theme-trail">
+                <span class="product-badge">Nuevo</span>
+                <svg viewBox="0 0 640 320" role="img" aria-label="Zapatilla PASO Trail">
+                  <use href="#icon-shoe" />
+                </svg>
+              </div>
+              <div class="product-body">
+                <div class="product-line">
+                  <h3>PASO Trail</h3>
+                  <span class="price">109 €</span>
+                </div>
+                <p>Suela de agarre y upper transpirable para salirte del camino.</p>
+                <button class="add-button" type="button" data-product="PASO Trail">Añadir a la cesta <span>+</span></button>
+              </div>
+            </article>
+
+            <article class="product-card reveal">
+              <div class="product-media theme-air">
+                <span class="product-badge">Edición limitada</span>
+                <svg viewBox="0 0 640 320" role="img" aria-label="Zapatilla PASO Air">
+                  <use href="#icon-shoe" />
+                </svg>
+              </div>
+              <div class="product-body">
+                <div class="product-line">
+                  <h3>PASO Air</h3>
+                  <span class="price">119 €</span>
+                </div>
+                <p>Amor propio. Espuma de alta respuesta y sensación de flotar.</p>
+                <button class="add-button" type="button" data-product="PASO Air">Añadir a la cesta <span>+</span></button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- BENEFICIOS -->
+      <section class="section section-dark" id="beneficios">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">Hechos con intención</p>
+              <h2>Más que un buen look</h2>
+            </div>
+            <p class="section-intro">Cada detalle está pensado para que olvides que llevas zapatos puestos.</p>
+          </div>
+
+          <div class="benefit-grid">
+            <article class="benefit reveal">
+              <span class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-feather" /></svg></span>
+              <h3>Ligereza real</h3>
+              <p>180 g por zapato. Te moverás como si no llevaras nada.</p>
+            </article>
+            <article class="benefit reveal">
+              <span class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-clock" /></svg></span>
+              <h3>Confort 24 h</h3>
+              <p>Plantilla amortiguada que aguanta mañanas largas y noches más largas.</p>
+            </article>
+            <article class="benefit reveal">
+              <span class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-leaf" /></svg></span>
+              <h3>Materiales responsables</h3>
+              <p>Polímeros reciclados y tintes de bajo impacto en toda la colección.</p>
+            </article>
+            <article class="benefit reveal">
+              <span class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-shield" /></svg></span>
+              <h3>Hechos para durar</h3>
+              <p>Construcción reforzada y 2 años de garantía en cada par.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPINIONES -->
+      <section class="section" id="opiniones">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">Lo que dice la gente</p>
+              <h2>4,9 sobre 5</h2>
+            </div>
+            <p class="section-intro">Más de 3.200 reseñas verificadas. Estas son algunas.</p>
+          </div>
+
+          <div class="review-grid">
+            <figure class="review reveal">
+              <div class="stars" aria-label="5 sobre 5">★★★★★</div>
+              <blockquote>“Los uso para trabajar y para correr detrás de mi hijo. Nunca me han dolido los pies tan poco.”</blockquote>
+              <figcaption><span class="avatar">LM</span><span><strong>Lucía M.</strong><small>Compra verificada</small></span></figcaption>
+            </figure>
+            <figure class="review reveal">
+              <div class="stars" aria-label="5 sobre 5">★★★★★</div>
+              <blockquote>“Pedí mi talla habitual y acerté. El envío llegó en 24 h y la calidad se nota al primer uso.”</blockquote>
+              <figcaption><span class="avatar">JR</span><span><strong>Javier R.</strong><small>Compra verificada</small></span></figcaption>
+            </figure>
+            <figure class="review reveal">
+              <div class="stars" aria-label="5 sobre 5">★★★★★</div>
+              <blockquote>“El modelo Urban es ahora mi uniforme. Combina con todo y aguanta una semana de viaje sin quejarse.”</blockquote>
+              <figcaption><span class="avatar">AC</span><span><strong>Ana C.</strong><small>Compra verificada</small></span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="newsletter">
+        <div class="container newsletter-inner reveal">
+          <div>
+            <p class="eyebrow">Únete al movimiento</p>
+            <h2>Un 10% para tu primer par</h2>
+            <p>Suscríbete y recibe novedades, lanzamientos y ofertas. Sin ruido.</p>
+          </div>
+          <form class="signup" id="signupForm" novalidate>
+            <label class="sr-only" for="email">Tu correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="tu@correo.com" autocomplete="email" required />
+            <button class="button button-primary" type="submit">Quiero mi descuento</button>
+            <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <a class="logo" href="#inicio">PASO<span>®</span></a>
+          <p>Hechos para moverte. Diseñados en España.</p>
+        </div>
+        <nav aria-label="Enlaces del pie de página">
+          <a href="#coleccion">Colección</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#opiniones">Opiniones</a>
+        </nav>
+        <p class="copyright">© <span id="year">2026</span> PASO. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
